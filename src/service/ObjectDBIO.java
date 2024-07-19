@@ -32,7 +32,6 @@ public abstract class ObjectDBIO {
     }
   }
 
-
   //DB Disconnection
   protected boolean close() {
 
@@ -45,7 +44,6 @@ public abstract class ObjectDBIO {
     }
 
   }
-
 
   //query 실행시 search => select 쿼리문
   protected ResultSet execute(String query, ResultSet rs) {

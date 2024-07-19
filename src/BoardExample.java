@@ -12,6 +12,7 @@ public class BoardExample {
   static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
   static BoardManager boardManager = BoardManager.getInstance();
   static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  static int bno = 1;
 
   public static void main(String[] args) throws IOException {
     BoardExample Instance = new BoardExample();
@@ -62,8 +63,9 @@ public class BoardExample {
     String bcontent = br.readLine();
     System.out.print("작성자 : ");
     String bwriter = br.readLine();
+    bno++;
     Date bdate = new Date();
-    Board board = new Board(0, btitle, bcontent, bwriter, bdate);
+    Board board = new Board(bno, btitle, bcontent, bwriter, bdate);
     System.out.println("----------------------------------------------------");
     System.out.println("보조메뉴 : 1.Ok | 2.Cancel");
     System.out.print("메뉴 선택 : ");
